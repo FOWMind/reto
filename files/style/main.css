@@ -1,0 +1,637 @@
+/* ---------- Comienza Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: #404040;
+    color: #ccc;
+}
+
+body {
+    background-color: #fafafa;
+    font-family: sans-serif, helvetica, arial;
+}
+
+img {
+    max-width: 100%;
+    user-select: none;
+}
+
+a { text-decoration: none; }
+
+/* ---------- Termina Reset ---------- */
+
+/* ---------- Comienza General ---------- */
+
+.totalContainer {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---------- Termina General ---------- */
+
+/* ---------- Comienza Header ---------- */
+
+header { padding: 0 1em; }
+
+.topNav,
+.mainMenu,
+.typeOfContent,
+.banner,
+.banner .newSquare {
+    display: flex;
+    align-items: center;
+}
+
+header .topNav {
+    padding: 1em 0;
+    justify-content: space-between;
+}
+
+.topNav .logo a { color: #404040; }
+
+.topNav .logo a span { display: block; }
+
+.topNav .logo .logoText { font-size: 2em; }
+
+.topNav .logo .logoText strong { color: #442ee8; }
+
+.topNav .logo .logoSlogan { font-size: .8em; }
+
+.topNav .announcement {
+    height: 70px;
+    overflow: hidden;
+}
+
+.topNav .announcement img {
+    width: 60%;
+    height: 100%;
+    float: right;
+    object-fit: cover;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+
+
+
+header .mainMenu {
+    padding: .8em 0;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    justify-content: space-between;
+}
+
+.mainMenu div a {
+    color: #303030;
+    font-weight: bold;
+    font-size: .8em;
+    text-decoration: underline;
+}
+
+.mainMenu div a:hover { text-decoration: none; }
+
+.mainMenu div input {
+    padding: .3em;
+    border: 1px solid rgba(0,0,0,.1);
+    outline: none;
+}
+
+.mainMenu div input:focus {
+    border-color: rgba(0,0,0,.3);
+}
+
+.mainMenu div label {
+    position: relative;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.mainMenu div label:before,
+.mainMenu div label:after {
+    content: ' ';
+    width: 10px;
+    position: absolute;
+}
+
+.mainMenu div label:before {
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #404040;
+    top: 0;
+    left: 0;
+}
+
+.mainMenu div label:after {
+    height: 2px;
+    background-color: #404040;
+    bottom: 0;
+    right: -20px;
+    transform: rotate(45deg);
+}
+
+
+.typeOfContent .typeOfObject,
+.typeOfContent .shortNew {
+    border: 2px solid #404040;
+    padding: .6em .9em;
+}
+
+header .typeOfContent {
+    padding: 1em 0;
+    margin: 1em 0;
+    justify-content: flex-start;
+}
+
+.typeOfContent .typeOfObject {
+    margin-right: 1em;
+    background-color: crimson;
+    position: relative;
+}
+
+.typeOfContent .typeOfObject:before {
+    content: ' ';
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -16px;
+    right: -2px;
+    border: 8px solid #404040;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.typeOfContent .typeOfObject span {
+    font-weight: bold;
+    font-size: .8em;
+    color: #fff;
+}
+
+.typeOfContent .shortNew {
+    background-color: #404040;
+}
+
+.typeOfContent .shortNew p {
+    color: #fff;
+    font-size: .8em;
+}
+
+
+
+
+
+
+
+.banner {
+    height: 70vh;
+    max-height: 500px;
+    margin-bottom: 6em;
+    background-color: #404040;
+}
+
+.banner [alt] { color: #fff; }
+
+.banner .newSquare {
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+}
+
+.banner .newSquare:first-child { width: 40%; }
+
+.banner .twoInOneSquare {
+    height: 100%;
+    width: 35%; 
+}
+
+.banner .twoInOneSquare .newSquare {
+    width: 100%;
+    height: 50%;
+}
+
+.banner .newSquare:last-child { width: 25%; }
+
+.banner .twoInOneSquare .newSquare:last-child { width: 100%; }
+
+
+
+
+.banner .newSquare .newBackgroundImage {
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+
+.banner .newSquare .newBackgroundImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s;
+}
+
+.banner .newSquare:hover .newBackgroundImage img {
+    transform: scale(1.3);
+}
+
+.banner .newSquare .textContent {
+    bottom: 0;
+    width: 100%;
+    padding: 1em;
+    background-color: rgba(0,0,0,.5);
+}
+
+.banner .newSquare .textContent .tag {
+    padding: .5em;
+    background-color: crimson;
+    display: inline-block;
+    cursor: default;
+}
+
+.banner .newSquare .textContent .tag span {
+    font-size: .9em;
+    color: #fff;
+}
+
+.banner .newSquare .textContent .newInfo { padding: .5em 0; }
+
+.banner .newSquare .textContent .newInfo span { display: block; }
+
+.banner .newSquare .textContent .newInfo .newAuthor {
+    font-size: .75em;
+    color: #eee;
+}
+
+.banner .newSquare .textContent .newInfo .newDate {
+    font-size: .7em;
+    color: #ccc
+}
+
+.banner .newSquare .textContent .newTitle h4 {
+    color: #fff;
+    font-size: .9em;
+}
+
+
+/* ---------- Termina Header ---------- */
+
+
+
+/* ---------- Comienza Main Content ---------- */
+
+.allMainContent,
+.mainContentBanner,
+.articleNotBanner,
+.moreArticlesFlex,
+.mainSidebar .utilities .calcContainer,
+.mainSidebar .grows .growItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainSidebar {
+    width: 30%;
+    padding: .5em;
+}
+
+.mainSidebar section {
+    padding: .5em;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.1);
+    margin-bottom: 1em;
+}
+
+.mainSidebar section:last-child,
+.mainSidebar .lastNews .lastNewItem div:last-child { margin-bottom: 0; }
+
+.mainSidebar .lastNews .lastNewItem div {
+    width: 95%;
+    height: 100px;
+    position: relative;
+    margin: 1em auto;
+}
+
+.mainSidebar .lastNews .lastNewItem div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #111;
+    display: block;
+}
+
+.mainSidebar .lastNews .lastNewItem div img[alt] { color: #fff; }
+
+.mainSidebar .lastNews .lastNewItem div .lastNewTag {
+    padding: .2em;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: crimson;
+    border: 2px solid #404040;
+    position: absolute;
+    bottom: 0;
+    left: -5px;
+}
+
+.mainSidebar .lastNews .lastNewItem div p {
+    font-size: .85em;
+    color: #333;
+}
+
+.mainSidebar .lastNews .lastNewItem div .lastNewDate {
+    font-size: .7em;
+    color: #909090;
+    display: block;
+}
+
+.mainSidebar .utilities h5
+.mainSidebar .utilities form input { color: #333; }
+
+.mainSidebar .utilities h5 {
+    font-size: 1em;
+    margin-bottom: .5em;
+}
+
+.mainSidebar .utilities div input {
+    border: 1px solid rgba(0,0,0,.1);
+    padding: .3em;
+    width: 48%;
+}
+
+.mainSidebar .utilities div input[type="submit"] {
+    margin: .3em auto 0 auto;
+    width: 50%;
+    min-width: 5em;
+    display: block;
+    cursor: pointer;
+    background-color: #dc143c;
+    color: #fff;
+}
+
+.mainSidebar .utilities div input[type="submit"]:hover { background-color: #ac143c; }
+
+.mainSidebar .utilities .announcements {
+    overflow: hidden;
+    margin-top: 1em;
+}
+
+.mainSidebar .utilities .announcements img {
+    width: 45%;
+    float: left;
+    border: 1px solid rgba(0,0,0,.2);
+    margin: 0 .2em;
+    display: block;
+}
+
+.mainSidebar .grows .growItem {
+    align-items: center;
+    margin-bottom: 1em;
+    width: 100%;
+    height: 100px;
+}
+
+.mainSidebar .grows .growItem .growCircle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,.1);
+    position: relative;
+}
+.mainSidebar .grows .growItem .growCircle span,
+.mainSidebar .grows .growItem div .percentage { font-weight: bold; }
+
+.mainSidebar .grows .growItem .growCircle span {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mainSidebar .grows .growItem div .percentage { color: crimson; }
+
+
+
+.mainContent .mainContentInterest .mainContentBanner {
+    height: 300px;
+    background-color: #404040;
+    background-image: url(../img/banners/cientificosAsteroides2Meses.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 3em;
+}
+
+.mainContent .mainContentInterest .mainContentBanner div {
+    align-self: flex-end;
+    padding: 1em;
+}
+
+.mainContent .mainContentInterest .mainContentBanner div h1,
+.mainContent .mainContentInterest .mainContentBanner div p { color: #fff; }
+
+.mainContent .mainContentInterest .mainContentBanner div h1 {
+    font-size: 1.7em;
+    margin-bottom: .5em;
+}
+
+.mainContent .mainContentInterest .mainContentBanner div p { font-size: .9em; }
+
+
+
+.mainContent .mainContentInterest .articleNotBanner .articlesContainer { padding-right: 1em; }
+
+.mainContent .mainContentInterest .articleNotBanner,
+.mainContent .mainContentInterest .articleNotBanner .articlesContainer article,
+.mainContent .mainContentInterest .articleNotBanner .mainContentSidebar .mainContentSidebarItem { padding: 1em; }
+
+.mainContent .mainContentInterest .articleNotBanner .articlesContainer article,
+.mainContent .mainContentInterest .articleNotBanner .mainContentSidebar {
+    border: 1px solid rgba(0,0,0,.1);
+    background: #fff;
+}
+
+.mainContent .mainContentInterest .articleNotBanner .articlesContainer article h2,
+.mainContent .mainContentInterest .articleNotBanner .articlesContainer article img[alt],
+.mainContent .mainContentInterest .articleNotBanner .articlesContainer article p,
+.mainContent .mainContentInterest .articleNotBanner .mainContentSidebar .mainContentSidebarItem h2 { color: #333; }
+
+.mainContent .mainContentInterest .articleNotBanner .articlesContainer article h2 { font-size: 2em; }
+
+.mainContent .mainContentInterest .articleNotBanner .articlesContainer article img {
+    width: 100%;
+    height: 250px;
+    margin: .5em 0;
+    object-fit: cover;
+}
+
+.mainContent .mainContentInterest .articleNotBanner .articlesContainer article hr {
+    width: 90%;
+    height: 2px;
+    border: none;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    margin: .5em auto 2em auto;
+}
+
+.mainContent .mainContentInterest .articleNotBanner .articlesContainer article p {
+    max-width: 500px;
+    font-size: .9em;
+    line-height: 1.2em;
+}
+
+
+.mainContent .mainContentInterest .articleNotBanner .mainContentSidebar .mainContentSidebarItem h2,
+.mainContent .mainContentInterest .articleNotBanner .mainContentSidebar .mainContentSidebarItem .sidebarLinks a { margin-bottom: .7em; }
+
+.mainContent .mainContentInterest .articleNotBanner .mainContentSidebar .mainContentSidebarItem .sidebarLinks li { list-style: none; }
+
+.mainContent .mainContentInterest .articleNotBanner .mainContentSidebar .mainContentSidebarItem .sidebarLinks a {
+    display: inline-block;
+    font-size: .85em;
+    color: crimson;
+}
+
+.mainContent .mainContentInterest .articleNotBanner .mainContentSidebar .mainContentSidebarItem .sidebarLinks a:hover { text-decoration: underline; }
+
+
+
+
+.mainContent .moreArticles h3 {
+    color: crimson;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.mainContent .moreArticles .moreArticlesFlex .moreArticleItem {
+    width: 30%;
+    height: 200px;
+    background-color: #404040;
+}
+
+
+
+.mainContent .moreArticles .moreArticlesAnnouncements {
+    border: 1px solid rgba(0,0,0,.1);
+    margin: 2em 0;
+}
+
+.mainContent .moreArticles .moreArticlesAnnouncements img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mainContent .globalStats {
+    border: 2px solid #404040;
+    margin-bottom: 4em;
+}
+
+.mainContent .globalStats table {
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.mainContent .globalStats th {
+    background-color: crimson;
+    color: #fff;
+}
+
+.mainContent .globalStats th,
+.mainContent .globalStats td  { padding: .5em; }
+
+
+/* ---------- Termina Main Content ---------- */
+
+
+
+
+/* ---------- Comienza Marketing ---------- */
+
+.wrapper .marketing { background-color: crimson; }
+
+.wrapper .marketing form { padding: 1em; }
+
+.wrapper .marketing form h3 {
+    color: #fff;
+    font-size: 1.7em;
+    margin-bottom: .5em;
+}
+
+.wrapper .marketing form input {
+    padding: .5em;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.wrapper .marketing form input[type="email"] { background-color: #fff; }
+
+.wrapper .marketing form input[type="submit"] {
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+}
+
+.wrapper .marketing form input[type="submit"]:hover,
+.wrapper .marketing form input[type="submit"]:focus {
+    background-color: #111;
+}
+
+.wrapper .marketing form input[type="email"]:focus { border-color: #404040; }
+
+/* ---------- Termina Marketing ---------- */
+
+
+/* ---------- Comienza Footer ---------- */
+
+.footer {
+    padding: 2em;
+    background-color: #111;
+    margin-top: 3em;
+}
+
+.footer .flexContainer { display: flex; }
+
+.footer .flexContainer section { width: 50%; }
+
+.footer .flexContainer section li { list-style: none; }
+
+.footer .flexContainer section a {
+    display: inline-block;
+    color: #fff;
+    font-size: .8em;
+    margin-bottom: .3em;
+}
+
+.footer .flexContainer section a:hover { text-decoration: underline; }
+
+
+
+.footer .footerLogo {
+    margin-bottom: 2em;
+}
+
+.footer .footerLogo h2 {
+    color: #fff;
+    font-size: 2.5em;
+}
+
+.footer .footerLogo h2 strong { color: #442ee8; }
+
+.footer .legal {
+    padding: .8m;
+}
+
+.footer .legal p {
+    color: #fff;
+    text-align: center;
+    font-size: .7em;
+}
+
+/* ---------- Termina Footer ---------- */
