@@ -199,6 +199,7 @@ header .typeOfContent {
     justify-content: space-between;
     position: relative;
     height: 100%;
+    border: 2px solid #fff;
 }
 
 .banner .newSquare:first-child { width: 40%; }
